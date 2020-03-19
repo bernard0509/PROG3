@@ -1,0 +1,68 @@
+//Exerc 2
+<?php
+class Empregados{
+  public $prinome;
+  public $segnome;
+  public $same;
+  public $saano;
+
+  public function __construct(){
+    $this-> pnome = "Claudette";
+    $this-> snome = "Morel";
+    $this-> same = 3000.00;
+  }
+  public function setPrinome($recebe){
+    return $this->prinome = $recebe;
+  }
+  public function getPrinome(){
+    return $this ->pnome;
+  }
+  public function setSegnome($recebe1){
+    return $this->segnome = $recebe1;
+  }
+  public function getSegnome(){
+    return $this ->segnome;
+  }
+  public function setSame($recebe2){
+    return $this->same = $recebe2;
+  }
+  public function getSame(){
+    return $this ->same;
+  }
+  public function setSaano(){
+    
+    return $this->saano = $this->same*12;
+  }
+  public function getSaano(){
+    return $this ->saano;
+  }
+  public function validaSame(){
+    if($this->same < 0){
+      $this->same = 0.0;
+    }
+  }
+  public function aumentasalmen(){
+    $porcent = ($this->same*10)/100;
+    $this-> same = $this->same + $porcent;
+  }
+}
+//empregado 1
+$empre1 = new Empregados();
+$empre1->validaSame();
+$empre1->setSaano();
+echo "O salario anual de {$empre1-> getPrinome()} {$empre1->getSegnome()} é R$ {$empre1->getSaano()}\n"; 
+$empre1 -> aumentasalmen();
+$empre1->setSaano();
+echo "O salario anual de {$empre1-> getPrinome()} recebeu acrescimo de 10% e agora é de R$ {$empre1->getSaano()} \n ";
+//empregado 2
+$empre2 = new Empregados();
+$empre2 -> setPrinome("Osório");
+$empre2 -> setSegnome("Fernandes");
+$empre2->setSame(2000);
+$empre2->validaSame();
+$empre2->setSaano();
+echo "O salario anual do(a) {$empre2-> getPrinome()}  {$empre2->getSegnome()} é R$ {$empre2->getSaano()} \n"; 
+$empre2 -> aumentasalmen();
+$empre2->setSaano();
+echo "O salario anual do(a) {$empre2-> getPrinome()} recebeu acrescimo de 10% e agora é  R$ {$empre2->getSaano()} \n ";
+?>
