@@ -1,0 +1,11 @@
+//exerc1
+<!--Descricao automovel-->
+automovel realiza a locomoção de pessoas e objetos, o carro necessita de um motor, chassi, acelerador, rodas, volante
+
+objetos
+
+motor: o carro precisa da energia liberada pela combustão para funcionar e assim se movimentar.
+chassi: o chassi é a estrutura base do automovel, sem ele o carro não teria forma.
+acelerador: o motor vai realizar sua principal tarefa devido ao acelerador, que fará que o carro consiga andar.
+rodas: as rodas do carro vão possibilitar que o carro consiga percorrer sua trajetória.
+volante: com o volante o motorista poderá guiar o carro para onde ele quiser.
