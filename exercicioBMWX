@@ -1,0 +1,42 @@
+<?php
+class Carro{
+  public $modelo;
+  public $velocidademaxima;
+  public $velocidadeatual;
+
+public function Carro($modl,$velomax){
+    $this->modelo = $modl;
+    $this->velolocidademaxima = $velomax;
+    echo "{$this->setModelo()} \n";
+    $this->ligaCarro();
+    $this->acelera();
+    $this->reduzir();
+    $this->pararCarro();
+    $this->desligaCarro();
+}
+public function ligaCarro(){
+      echo"Carro ligado \n";
+  }
+public function desligaCarro(){
+    echo "Carro Desligado \n ";
+  }
+public function acelera(){
+    $this->velocidadeatual = $this->velocidademaxima;
+    echo "Acelerando \nVelocidade = {$this->velocidadeatual} km/h \n";
+  }
+public function setModelo(){
+    return $this->modelo;
+  }
+public function reduzir(){
+    $this->velocidadeatual = $this->velocidadeatual/2;
+    echo"Reduzindo velocidade! \nVelocidade = {$this->velocidadeatual} km/h \n";
+  }
+public function pararCarro(){
+    $this->velocidadeatual = 0;
+    echo "Carro parado \nVelocidade = {$this->velocidadeatual} km/h\n";
+  }
+
+}
+
+$carro = new Carro("BMW X",80);
+?>
